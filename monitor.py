@@ -33,6 +33,9 @@ def spo2_ok(spo2):
 def blood_sugar_ok(bloodSugar):
   return alert_if_not_in_range(bloodSugar, 70, 110, 'Blood Sugar is out of range!')
 
+def blood_pressure_ok(bloodPressure):
+  return alert_if_not_in_range(bloodPressure, 90, 150, 'Blood Pressure is out of range!')
+
 def vitals_ok(temperature, pulseRate, spo2):
   return temperature_ok(temperature) and pulse_rate_ok(pulseRate) and spo2_ok(spo2)
 
@@ -40,7 +43,8 @@ map_vital_to_check = {
   'temperature': temperature_ok,
   'pulseRate': pulse_rate_ok,
   'spo2': spo2_ok,
-  'bloodSugar': blood_sugar_ok
+  'bloodSugar': blood_sugar_ok,
+  'bloodPressure': blood_pressure_ok
 }
 
 def report_is_normal(report):
