@@ -42,9 +42,10 @@ class MonitorTest(unittest.TestCase):
             'pulseRate': 70,
             'spo2': 97,
             'bloodSugar': 80,
-            'bloodPressure': 200
+            'bloodPressure': 110,
+            'respiratoryRate': 40
         }))
-        mock_alert.assert_called_once_with('Blood Pressure is out of range!')
+        mock_alert.assert_called_once_with('Respiratory Rate is out of range!')
 
 
 if __name__ == '__main__':
